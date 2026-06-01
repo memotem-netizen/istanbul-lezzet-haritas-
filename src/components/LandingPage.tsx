@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map } from 'lucide-react';
+import { Map, Mail } from 'lucide-react';
 import logoUrl from '../assets/images/istanbul_lezzet_logo_premium_1780316932972.png';
 import { useAppContext } from '../AppContext';
 
@@ -36,13 +36,22 @@ export default function LandingPage({ onEnter }: LandingPageProps) {
           {t('appDesc')}
         </p>
         
-        <button 
-          onClick={onEnter}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all transform hover:scale-105 flex items-center gap-3 cursor-pointer"
-        >
-          <Map className="w-6 h-6" />
-          {t('exploreBtn')}
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button 
+            onClick={onEnter}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_rgba(37,99,235,0.6)] transition-all transform hover:scale-105 flex items-center justify-center gap-3 cursor-pointer"
+          >
+            <Map className="w-6 h-6" />
+            {t('exploreBtn')}
+          </button>
+          
+          <a href="mailto:mehmet.kader10@icloud.com"
+            className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-4 px-10 rounded-full text-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 cursor-pointer"
+          >
+            <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            {t('suggestions')}
+          </a>
+        </div>
       </div>
     </div>
   );

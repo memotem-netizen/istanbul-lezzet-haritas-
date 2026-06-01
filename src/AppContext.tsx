@@ -25,7 +25,9 @@ const translations = {
     hours: "Saat",
     phone: "Telefon",
     categories: "Kategoriler",
-    all: "Tümü"
+    all: "Tümü",
+    back: "Ana Sayfaya Dön",
+    suggestions: "Öneri ve Talep"
   },
   en: {
     appTitle: "Istanbul Food Map",
@@ -40,7 +42,9 @@ const translations = {
     hours: "Hours",
     phone: "Phone",
     categories: "Categories",
-    all: "All"
+    all: "All",
+    back: "Go Back",
+    suggestions: "Suggestions & Requests"
   }
 };
 
