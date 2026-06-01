@@ -21,7 +21,7 @@ export default function LandingPage({ onEnter }: LandingPageProps) {
       </div>
       
       <div className="z-10 text-center px-6 max-w-4xl w-full flex flex-col items-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        <div className="w-28 h-28 bg-white rounded-3xl flex items-center justify-center mb-8 shadow-xl transform -rotate-6 overflow-hidden border-4 border-blue-100 dark:border-slate-800 p-2">
+        <div className="w-48 h-48 md:w-56 md:h-56 bg-white rounded-3xl flex items-center justify-center mb-8 shadow-xl transform -rotate-6 overflow-hidden border-4 border-blue-100 dark:border-slate-800 p-2">
           <img src={logoUrl} alt="Logo" className="w-full h-full object-contain" />
         </div>
         

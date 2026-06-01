@@ -26,8 +26,9 @@ export default function Sidebar({ activeLocation, onLocationSelect }: SidebarPro
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {locations.map((loc) => {
+        {locations.map((loc, index) => {
           const isActive = activeLocation?.id === loc.id;
+          const locNumber = index + 1;
           return (
             <div 
               key={loc.id}
@@ -54,7 +55,10 @@ export default function Sidebar({ activeLocation, onLocationSelect }: SidebarPro
                 
                 <div className="flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className={`font-bold leading-tight mb-1 ${isActive ? 'text-blue-700 dark:text-blue-400' : 'text-gray-900 dark:text-white'}`}>{loc.name}</h3>
+                    <h3 className={`font-bold leading-tight mb-1 ${isActive ? 'text-blue-700 dark:text-blue-400' : 'text-gray-900 dark:text-white'}`}>
+                      <span className="text-blue-500 mr-1.5 text-sm">#{locNumber}</span>
+                      {loc.name}
+                    </h3>
                     <div className="flex items-start gap-1 text-xs text-blue-600 dark:text-blue-400 font-medium mb-2">
                       <MapPin className="h-3 w-3 shrink-0 mt-0.5" />
                       <span className="leading-snug">{loc.address}</span>

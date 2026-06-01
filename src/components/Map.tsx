@@ -95,7 +95,9 @@ export default function Map({ activeLocation, onLocationSelect }: MapProps) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         />
-        {locations.map((loc) => (
+        {locations.map((loc, index) => {
+          const locNumber = index + 1;
+          return (
           <Marker 
             key={loc.id} 
             position={[loc.lat, loc.lng]}
@@ -107,7 +109,10 @@ export default function Map({ activeLocation, onLocationSelect }: MapProps) {
             <Popup>
               <div className="p-1 min-w-[200px] text-slate-900 border-none">
                 <div className="flex justify-between items-start gap-2 mb-1">
-                  <h3 className="font-bold text-gray-900 leading-tight m-0 p-0">{loc.name}</h3>
+                  <h3 className="font-bold text-gray-900 leading-tight m-0 p-0">
+                    <span className="text-blue-600 mr-1.5">#{locNumber}</span>
+                    {loc.name}
+                  </h3>
                   <div className="bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded text-xs font-bold flex items-center gap-1 shrink-0 m-0">
                     ★ {loc.rating}
                   </div>
@@ -130,7 +135,8 @@ export default function Map({ activeLocation, onLocationSelect }: MapProps) {
               </div>
             </Popup>
           </Marker>
-        ))}
+          );
+        })}
       </MapContainer>
     </div>
   );
