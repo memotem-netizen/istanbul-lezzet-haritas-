@@ -1,0 +1,6 @@
+{
+  "name": "İstanbul Lezzet Haritası",
+  "description": "İstanbul'un ünlü tarihi lezzet duraklarını keşfetmenizi sağlayan etkileşimli harita uygulaması.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
